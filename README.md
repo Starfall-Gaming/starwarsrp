@@ -5,11 +5,8 @@ This gamemode is a helix schema meant to be used for generic StarWarsRP by Starf
 
 # How to edit
 
-All changes SPECIFIC to ImperialRP should ONLY be made on the imperial branch.
-To add these changes to the generic gamemode, create a pull request to merge your commit into the master branch.
-
-All changes that affect the generic starwarsrp gamemode should be made through the master branch.
-To add these changes to the ImperialRP gamemode, create a pull request to merge your commit into the imperial branch.
+The master branch should be kept up to date with all changes that affect the generic StarWarsRP.
+Any changes made in other branches should be merged back into the master with pull requests.
 
 # Helix Base
 
