@@ -1,8 +1,8 @@
 
-"skeleton"
+"starwarsrp"
 {
 	"base" 			"helix"
-	"title" 		"Skeleton"
+	"title" 		"StarWarsRP"
 	"author" 		"nebulous"
 	"menusystem"	"1"
 }
