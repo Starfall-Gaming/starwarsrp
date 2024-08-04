@@ -9,3 +9,8 @@ To add these changes to the generic gamemode, create a pull request to merge you
 
 All changes that affect the generic starwarsrp gamemode should be made through the master branch.
 To add these changes to the ImperialRP gamemode, create a pull request to merge your commit into the imperial branch.
+
+# Helix Base
+
+This gamemode requires the Helix base Garry's Mod gamemode.
+It can be found at https://github.com/NebulousCloud/helix
