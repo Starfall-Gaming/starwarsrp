@@ -1,6 +1,7 @@
-# ImperialRP Schema
 
-This gamemode is a helix schema meant to be used for ImperialRP by Starfall Gaming.
+# Starfall Gaming Schema
+
+This gamemode is a helix schema meant to be used for generic StarWarsRP by Starfall Gaming.
 
 # How to edit
 
