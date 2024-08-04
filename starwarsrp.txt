@@ -2,7 +2,7 @@
 "starwarsrp"
 {
 	"base" 			"helix"
-	"title" 		"StarWarsRP"
+	"title" 		"ImperialRP"
 	"author" 		"nebulous"
 	"menusystem"	"1"
 }
