@@ -11,5 +11,14 @@
 -- L("serverWelcome", "John Lua") would return a string with the text "Welcome to the server, John Lua!".
 
 LANGUAGE = {
-	serverWelcome = "Welcome to the server, %s!"
+	serverWelcome = "Welcome to the server, %s!",
+	whitelist = "Whitelist",
+    FactionBecome = "Become",
+    FactionExit = "Exit",
+    FactionSwitchInvalidClass = "Invalid class!",
+    FactionSwitchInvalidFaction = "Invalid faction!",
+    FactionSwitchNotWhitelistedClass = "You do not have the whitelist for %s!",
+    FactionSwitchNotWhitelistedFaction = "You do not have the whitelist for %s!",
+    FactionSwitchSameJob = "You are already a %s",
+    FactionSwitchClass = "%s has been made a %s",
 }
