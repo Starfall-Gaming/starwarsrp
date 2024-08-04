@@ -1,5 +1,17 @@
 
-# Skeleton Schema
-This project provides a minimal template to kickstart schema development for [Helix](https://github.com/nebulouscloud/helix).
-It contains all the necessary bootstrapping code, proper file structure, and some documentation to help you get started as
-quickly as possible.
+# Starfall Gaming Schema
+
+This gamemode is a helix schema meant to be used for generic StarWarsRP by Starfall Gaming.
+
+# How to edit
+
+All changes SPECIFIC to ImperialRP should ONLY be made on the imperial branch.
+To add these changes to the generic gamemode, create a pull request to merge your commit into the master branch.
+
+All changes that affect the generic starwarsrp gamemode should be made through the master branch.
+To add these changes to the ImperialRP gamemode, create a pull request to merge your commit into the imperial branch.
+
+# Helix Base
+
+This gamemode requires the Helix base Garry's Mod gamemode.
+It can be found at https://github.com/NebulousCloud/helix
