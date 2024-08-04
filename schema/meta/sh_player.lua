@@ -33,7 +33,3 @@ function PLAYER:getJobTable()
     end
     return job
 end
-
-ALWAYS_RAISED = ALWAYS_RAISED or {}
-ALWAYS_RAISED["weapon_lightsaber_personal"] = true
-ALWAYS_RAISED["weapon_lightasber_wos_warrior"] = true
