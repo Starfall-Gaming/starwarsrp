@@ -1,4 +1,4 @@
-CLASS.name = "Emperor Palpatine"
+CLASS.name = "Galactic Emperor"
 CLASS.faction = FACTION_INNER_CIRCLE
 CLASS.isDefault = true
 CLASS.models = {
@@ -18,6 +18,7 @@ if (SERVER) then
 
     function CLASS:OnSpawn(client)
         client:SetModel("models/player/emperor_palpatine.mdl")
+        client:Give("weapon_lightsaber_palpatine")
     end
 end
 

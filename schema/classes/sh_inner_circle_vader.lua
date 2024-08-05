@@ -19,6 +19,7 @@ if (SERVER) then
     function CLASS:OnSpawn(client)
         client:SetModel("models/nanb_darth_vader.mdl")
         client:SetModelScale(1.15)
+        client:Give("weapon_lightsaber_vader")
     end
 end
 

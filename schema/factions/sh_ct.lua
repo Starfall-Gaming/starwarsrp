@@ -1,4 +1,4 @@
-FACTION.name = "Clone Troopers"
+FACTION.name = "1st Infantry"
 FACTION.description = "DESCRIPTION"
 FACTION.color = Color(140, 140, 140)
 FACTION.faction = FACTION_CLONE_TROOPERS
