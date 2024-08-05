@@ -8,8 +8,6 @@ end, {
 	category = "characters"
 })
 
-hook.Add("ShouldHideBars", "DisableInfoBars", function() return true end)
-
 -- Remove cmd not exist message in chat
 function ix.command.Parse(client, text, realCommand, arguments)
     if (realCommand or text:utf8sub(1, 1) == COMMAND_PREFIX) then
