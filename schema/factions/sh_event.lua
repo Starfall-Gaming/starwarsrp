@@ -1,8 +1,8 @@
-FACTION.name = "Inner Circle"
-FACTION.description = "DESCRIPTION"
-FACTION.color = Color(71, 23, 23)
-FACTION.faction = FACTION_INNER_CIRCLE
-FACTION.isDefault = false
+FACTION.name = "Event Characters"
+FACTION.description = "Classes used by gamemasters"
+FACTION.color = Color(169, 0, 255)
+FACTION.faction = FACTION_NAME
+FACTION.isDefault = true
 FACTION.models = {
     "models/player/kurier/fleet/admiral.mdl",
 }
@@ -21,4 +21,4 @@ if (SERVER) then
     end
 end
 
-FACTION_INNER_CIRCLE = FACTION.index
+FACTION_NAME = FACTION.index

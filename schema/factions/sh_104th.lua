@@ -1,8 +1,11 @@
 FACTION.name = "104th Battalion"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(104, 104, 104)
 FACTION.faction = FACTION_104TH_BATTALION
 FACTION.isDefault = false
+FACTION.models = {
+    "models/memeious/104/trooper.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }

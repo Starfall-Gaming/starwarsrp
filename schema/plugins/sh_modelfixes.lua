@@ -14,6 +14,6 @@ end
 for _, model in pairs(models) do
     if ix.anim.GetModelClass(model) != "player" then
         ix.anim.SetModelClass(model, "player")
-        print("[Model Anim Fix] " .. model)
+        if SERVER then print("[Model Anim Fix] " .. model) end
     end
 end

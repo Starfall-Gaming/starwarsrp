@@ -9,3 +9,17 @@ function Schema:GetPlayerDeathSound(client)
 		return "NPC_MetroPolice.Die"
 	end
 end
+
+-- Adds whitelists checks
+function Schema:CanPlayerJoinClass(client, class, info)
+	PrintTable(info)
+    if client ply:HasWhitelist(info.faction) then
+        -- ply:NotifyLocalized("FactionSwitchNotWhitelistedFaction", factionData.name)
+        return false, "missing faction whitelist"
+    end
+
+    if client.HasClassWhitelist and not client:HasClassWhitelist(class) then
+        -- ply:NotifyLocalized("FactionSwitchNotWhitelistedClass", classData.name)
+        return false, "missing class whitelist"
+    end
+end

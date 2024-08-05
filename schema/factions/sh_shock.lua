@@ -1,8 +1,11 @@
 FACTION.name = "Shock Security Force"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(51, 9, 9)
 FACTION.faction = FACTION_SHOCK_SECURITY
 FACTION.isDefault = false
+FACTION.models = {
+    "models/defcon/stallion/shock/trooper.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }

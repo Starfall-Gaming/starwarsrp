@@ -1,8 +1,11 @@
-FACTION.name = "Senate Commando"
+FACTION.name = "Reg Guard"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
-FACTION.faction = FACTION_SENATE_COMMANDO
+FACTION.color = Color(255, 0, 0)
+FACTION.faction = FACTION_RED_GUARD
 FACTION.isDefault = false
+FACTION.models = {
+    "models/defcon/stallion/shock/redguard.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }
@@ -21,4 +24,4 @@ if (SERVER) then
     end
 end
 
-FACTION_SENATE_COMMANDO = FACTION.index
+FACTION_RED_GUARD = FACTION.index

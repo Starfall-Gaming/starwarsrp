@@ -49,3 +49,9 @@ function ix.command.Parse(client, text, realCommand, arguments)
 
     return false
 end
+
+-- Add faction.classes table
+for _, class in ipairs(ix.class.list) do
+    ix.faction.indices[class.faction] = ix.faction.indices[class.faction] or {}
+    table.insert(ix.faction.indices[class.faction], nil, class)
+end

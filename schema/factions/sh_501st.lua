@@ -1,8 +1,11 @@
 FACTION.name = "501st Legion"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(29, 68, 242)
 FACTION.faction = FACTION_501ST_LEGION
 FACTION.isDefault = false
+FACTION.models = {
+    "models/defcon/loudmantis/501/trooper.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }

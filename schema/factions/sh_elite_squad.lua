@@ -1,8 +1,11 @@
 FACTION.name = "Elite Squad"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(25, 56, 31)
 FACTION.faction = FACTION_ELITE_SQUAD
 FACTION.isDefault = false
+FACTION.models = {
+    "models/nada/elitesquadtrooper.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }

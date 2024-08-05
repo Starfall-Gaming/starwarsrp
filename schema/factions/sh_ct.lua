@@ -1,8 +1,11 @@
 FACTION.name = "Clone Troopers"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(140, 140, 140)
 FACTION.faction = FACTION_CLONE_TROOPERS
 FACTION.isDefault = true
+FACTION.models = {
+    "models/defcon/stan/1stinfantry/trooper/1stinfantrytrooper.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }

@@ -1,5 +1,5 @@
-CLASS.name = "Senate Commando Trooper"
-CLASS.faction = FACTION_SENATE_COMMANDO
+CLASS.name = "Red Guard"
+CLASS.faction = FACTION_RED_GUARD
 CLASS.isDefault = true
 CLASS.models = {
     "models/player/valley/lgn/jocasta/jocasta.mdl"

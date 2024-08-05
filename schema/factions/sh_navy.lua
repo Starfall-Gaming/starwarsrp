@@ -1,8 +1,11 @@
 FACTION.name = "Republic Navy"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(3, 64, 97)
 FACTION.faction = FACTION_REPUBLIC_NAVY
 FACTION.isDefault = false
+FACTION.models = {
+    "models/player/kurier/fleet/lightgrey.mdl",
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }

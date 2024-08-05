@@ -21,45 +21,14 @@ net.Receive("ix.darkrp.preferredjobmodel", function(len, ply)
 end)
 
 -- Changes helix faction and class
-function ix.darkrp.FactionSwitch(ply, newFaction, newClass)
-    if not (IsValid(ply) and ply:Alive()) then return end
-    local char = ply:GetCharacter()
-    if not char then return end
-
-    if char:GetFaction() == newFaction and char:GetClass() == newClass then
-        ply:NotifyLocalized("FactionSwitchSameJob", newClass.name)
-        return
+hook.Add("CanPlayerJoinClass", "ix.DarkRP.FactionSwitch", function(client, class, info)
+    if client.HasWhitelist and not client:HasWhitelist(class.faction) then
+        return false, "no faction whitelist"
     end
 
-    local factionData = ix.faction.indices[newFaction]
-    if not factionData then
-        ply:NotifyLocalized("FactionSwitchInvalidFaction")
-        return
+    if client.HasClassWhitelist and not client:HasClassWhitelist(class) then
+        return false, "no class whitelist"
     end
-
-    local classData = ix.class.list[newClass]
-    if not classData then
-        ply:NotifyLocalized("FactionSwitchInvalidClass")
-        return
-    end
-
-    if not ply:HasWhitelist(newFaction) then
-        ply:NotifyLocalized("FactionSwitchNotWhitelistedFaction", factionData.name)
-        return
-    end
-
-    if ply.HasClassWhitelist and not ply:HasClassWhitelist(newClass) then
-        ply:NotifyLocalized("FactionSwitchNotWhitelistedClass", classData.name)
-        return
-    end
-
-    char:SetFaction(newFaction)
-    char:SetClass(newClass)
-    ply:Spawn()
-    if ply.PreferredJobModels and ply.PreferredJobModels[newFaction] then ply:SetModel(ply.PreferredJobModels[newFaction]) end
-    for i, v in ipairs(player.GetAll()) do
-        v:NotifyLocalized("FactionSwitchClass", ply:Nick(), classData.name)
-    end
-end
+end)
 
 DarkRP = ix.darkrp

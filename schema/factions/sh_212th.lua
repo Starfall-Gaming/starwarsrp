@@ -1,8 +1,11 @@
 FACTION.name = "212th Attack Battalion"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
+FACTION.color = Color(214, 138, 45)
 FACTION.faction = FACTION_212TH_ATTACK
 FACTION.isDefault = false
+FACTION.models = {
+    "models/mayfield/212/trooper.mdl"
+}
 FACTION.weapons = {
     "rw_sw_dc15a"
 }
