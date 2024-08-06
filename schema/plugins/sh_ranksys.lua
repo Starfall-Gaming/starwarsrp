@@ -181,11 +181,11 @@ local rankSystem = {
 
 
 local branchFactionMap = {
-    Army = {FACTION_104TH_BATTALION, FACTION_212TH_ATTACK, FACTION_501ST_LEGION, FACTION_CLONE_TROOPERS, FACTION_SHOCK_SECURITY}, -- Replace with actual faction IDs for the Army
+    Army = {FACTION_TIE_CORPS, FACTION_PURGE_DIVISION, FACTION_501ST_LEGION, FACTION_STORMTROOPER, FACTION_SHOCK_SECURITY}, -- Replace with actual faction IDs for the Army
     Navy = {FACTION_NAVY}, -- Replace with actual faction IDs for the Navy
     DT = {FACTION_ELITE_SQUAD},
     Inquisitor = {},
-    Guardsmen = {FACTION_RED_GUARD},
+    Guardsmen = {FACTION_ROYAL_GUARD},
     Admin = {FACTION_INNER_CIRCLE},
 }
 
