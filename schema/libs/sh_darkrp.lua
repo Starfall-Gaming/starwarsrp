@@ -33,7 +33,7 @@ function ix.darkrp.GetJob(id)
         description = class.description or "",
         hasLicense = false,
         max = class.limit or 0,
-        model = class.models or "models/player/Group01/male_01.mdl",
+        model = CLASS.model or "models/player/Group01/male_01.mdl",
         name = class.name or "",
         salary = 0,
         sortOrder = id,
