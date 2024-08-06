@@ -1,7 +1,7 @@
-FACTION.name = "Inner Circle"
+FACTION.name = "Inquisition"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(255, 255, 255, 255)
-FACTION.faction = FACTION_INNER_CIRCLE
+FACTION.color = Color(255, 0, 0)
+FACTION.faction = FACTION_INQUISITION
 FACTION.isDefault = false
 
 function FACTION:GetDefaultName(client)
@@ -18,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_INNER_CIRCLE = FACTION.index
+FACTION_IQUISITION = FACTION.index

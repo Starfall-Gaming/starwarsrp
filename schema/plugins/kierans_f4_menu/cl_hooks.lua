@@ -1,7 +1,5 @@
--- cl_hooks.lua
+local PLUGIN = PLUGIN
 
-hook.Add("PlayerButtonDown", "OpenImperialF4Menu", function(ply, button)
-    if (button == KEY_F4 and IsFirstTimePredicted()) then
-        vgui.Create("ixImperialF4Menu")
-    end
-end)
+function PLUGIN:ShowSpare2()
+    vgui.Create("ixImperialF4Menu")
+end

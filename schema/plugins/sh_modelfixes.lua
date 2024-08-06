@@ -5,8 +5,8 @@ PLUGIN.desc = "Changes the anims for certain models to use the player anims."
 --ix.anim.SetModelClass("model", "player")
 local models = player_manager.AllValidModels()
 for _, class in pairs(ix.class.list) do
-    class.models = class.models or {}
-    for _, model in pairs(class.models) do
+    class.model = class.model or {}
+    for _, model in pairs(class.model) do
         models[#models] = model
     end
 end

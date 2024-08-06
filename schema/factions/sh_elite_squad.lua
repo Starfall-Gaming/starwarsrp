@@ -1,11 +1,8 @@
-FACTION.name = "Elite Squad"
+FACTION.name = "Death trooper division"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(200, 200, 200, 255)
-FACTION.faction = FACTION_ELITE_SQUAD
+FACTION.color = Color(25, 56, 31)
+FACTION.faction = FACTION_DEATH_TROOPER
 FACTION.isDefault = false
-FACTION.weapons = {
-    "rw_sw_dc15a"
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -21,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_ELITE_SQUAD = FACTION.index
+FACTION_DEATH_TROOPER = FACTION.index

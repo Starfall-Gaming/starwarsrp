@@ -1,7 +1,7 @@
 CLASS.name = "Darth Vader"
-CLASS.faction = FACTION_INNER_CIRCLE
+CLASS.faction = FACTION_HIGH_COMMAND
 CLASS.isDefault = false
-CLASS.models = {
+CLASS.model = {
     "models/nanb_darth_vader.mdl"
 }
 

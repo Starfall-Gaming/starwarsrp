@@ -1,5 +1,5 @@
-CLASS.name = "Elite Squad Trooper"
-CLASS.faction = FACTION_ELITE_SQUAD
+CLASS.name = "Death Trooper"
+CLASS.faction = FACTION_DEATH_TROOPER
 CLASS.isDefault = true
 CLASS.models = {
     "models/nada/elitesquadtrooper.mdl"
@@ -21,4 +21,4 @@ if (SERVER) then
     end
 end
 
-CLASS_ELITE_TROOPER = CLASS.index
+FACTION_DEATH_TROOPER = CLASS.index
