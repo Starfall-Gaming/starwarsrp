@@ -10,7 +10,8 @@ ALWAYS_RAISED = ALWAYS_RAISED or {}
 local weaponPrefixes = {
     "weapon_lightsaber_",
     "rw_sw_",
-    "deathtrooper"
+    "deathtrooper",
+    "dt_",
 }
 
 local weapons = weapons.GetList()
