@@ -54,7 +54,7 @@ SWEP.PrintName = "Palpatine's Lightsaber" --Name of the lightsaber
 SWEP.Class = "weapon_lightsaber_palpatine" --The file name of this swep
 SWEP.DualWielded = false --Should this be a dual wielded saber?
 SWEP.CanMoveWhileAttacking = true -- Can the user move while attacking
-SWEP.SaberDamage = 500 --How much damage the saber does when it's being swung
+SWEP.SaberDamage = 400 --How much damage the saber does when it's being swung
 SWEP.SaberBurnDamage = 25 -- How much damage the saber does when it's colliding with someone ( coming in contact with laser )
 SWEP.MaxForce = 100 --The maximum amount of force in the meter
 SWEP.RegenSpeed = 1 --The MULTIPLIER for the regen speed. Half speed = 0.5, Double speed = 2, etc.
@@ -72,7 +72,8 @@ SWEP.DevestatorList = {  }
 }
 ]]--
 
-SWEP.UseForms = true
+SWEP.UseForms = false
+SWEP.UseSkills = true
 
 --Use these options to overwrite the player's commands
 SWEP.UseHilt = "models/sgg/starwars/weapons/w_sidious_saber_hilt.mdl" -- Model path of the hilt

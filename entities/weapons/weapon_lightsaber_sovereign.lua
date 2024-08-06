@@ -50,16 +50,16 @@ SWEP.Secondary.Automatic = true
 SWEP.Secondary.Ammo = "none"
 
 ------------------------------------------------------------THINGS YOU WILL EDIT ARE BELOW HERE-------------------------------------------------------------------------
-SWEP.PrintName = "Inquistorius's Lightsaber" --Name of the lightsaber
-SWEP.Class = "weapon_lightsaber_inquisitorius" --The file name of this swep
+SWEP.PrintName = "Sovereign Protector's Lightsaber" --Name of the lightsaber
+SWEP.Class = "weapon_lightsaber_sovereign" --The file name of this swep
 SWEP.DualWielded = false --Should this be a dual wielded saber?
 SWEP.CanMoveWhileAttacking = true -- Can the user move while attacking
 SWEP.SaberDamage = 200 --How much damage the saber does when it's being swung
 SWEP.SaberBurnDamage = 25 -- How much damage the saber does when it's colliding with someone ( coming in contact with laser )
-SWEP.MaxForce = 100 --The maximum amount of force in the meter
+SWEP.MaxForce = 0 --The maximum amount of force in the meter
 SWEP.RegenSpeed = 1 --The MULTIPLIER for the regen speed. Half speed = 0.5, Double speed = 2, etc.
 SWEP.CanKnockback = false --Should this saber be able to push people back when they get hit?
-SWEP.ForcePowerList = { "Force Leap", "Channel Hatred", "Inquisitor's Spin" } 
+SWEP.ForcePowerList = {  } 
 SWEP.DevestatorList = {  }
 --Force powers you want the saber to have ( REMEMBER TO PUT A COMMA AFTER EACH ONE, AND COPY THE TITLE EXACTLY AS IT'S LISTED )
 --For a list of options, just look at the keys in autorun/client/wos_forcematerialbuilding.lua
@@ -73,13 +73,12 @@ SWEP.DevestatorList = {  }
 ]]--
 
 SWEP.UseForms = false
-SWEP.UseSkills = true
 
 --Use these options to overwrite the player's commands
-SWEP.UseHilt = "models/star/venator/inqusitor_saber.mdl" -- Model path of the hilt
+SWEP.UseHilt = "models/sgg/starwars/weapons/w_saber_dual_3_hilt.mdl" -- Model path of the hilt
 SWEP.UseLength = 32 -- Length of the saber 
 SWEP.UseWidth = 2 -- Width of the saber
-SWEP.UseColor = Color( 255, 0, 0 ) -- RGB Color of saber. Red = Color( 255, 0, 0 ) Blue = Color( 0, 0, 255 ), etc.
+SWEP.UseColor = Color( 255, 255, 255 ) -- RGB Color of saber. Red = Color( 255, 0, 0 ) Blue = Color( 0, 0, 255 ), etc.
 SWEP.UseDarkInner = false -- Does it have a dark inner? 1 = true
 SWEP.UseLoopSound = false -- The loop sound path
 SWEP.UseSwingSound = false -- The swing sound path

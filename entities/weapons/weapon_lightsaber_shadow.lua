@@ -50,31 +50,49 @@ SWEP.Secondary.Automatic = true
 SWEP.Secondary.Ammo = "none"
 
 ------------------------------------------------------------THINGS YOU WILL EDIT ARE BELOW HERE-------------------------------------------------------------------------
-SWEP.PrintName = "Shadow Guard's Lightsaber" --Name of the lightsaber
+SWEP.PrintName = "Shadow's Lightsaber" --Name of the lightsaber
 SWEP.Class = "weapon_lightsaber_shadow" --The file name of this swep
 SWEP.DualWielded = false --Should this be a dual wielded saber?
 SWEP.CanMoveWhileAttacking = true -- Can the user move while attacking
-SWEP.MaxForce = 100 --The maximum amount of force in the meter
+SWEP.SaberDamage = 200 --How much damage the saber does when it's being swung
+SWEP.SaberBurnDamage = 25 -- How much damage the saber does when it's colliding with someone ( coming in contact with laser )
+SWEP.MaxForce = 0 --The maximum amount of force in the meter
 SWEP.RegenSpeed = 1 --The MULTIPLIER for the regen speed. Half speed = 0.5, Double speed = 2, etc.
 SWEP.CanKnockback = false --Should this saber be able to push people back when they get hit?
-SWEP.ForcePowerList = { "Force Leap", "Channel Hatred" } 
+SWEP.ForcePowerList = { "Force Leap", "Channel Hatred", "Electric Judgement" } 
+SWEP.DevestatorList = {  }
 --Force powers you want the saber to have ( REMEMBER TO PUT A COMMA AFTER EACH ONE, AND COPY THE TITLE EXACTLY AS IT'S LISTED )
 --For a list of options, just look at the keys in autorun/client/wos_forcematerialbuilding.lua
 
+--[[ Use this to overwrite the ULX Forms/Stances for this particular swep ( [ "FORMNAME" ] = { STANCENUM1, STANCENUM2, STANCENUM3 } )
+	Example:
+	SWEP.UseForms = {
+	["Aggressive"] = { 1, 3 }, 
+	["Defensive"] = { 2 }, 
+}
+]]--
+SWEP.UseForms = {
+	["Defensive"] = { 3 }, 
+}
 SWEP.UseSkills = true
-SWEP.PersonalLightsaber = true
 
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
---- EDIT DAMAGE, HILT, COLOR, AND OTHER PROPERTIES IN THE wos/advswl/config/crafting/sh_craftwos.lua FILE! ---
+--Use these options to overwrite the player's commands
+SWEP.UseHilt = "models/donation1/donation1.mdl" -- Model path of the hilt
+SWEP.UseLength = 32 -- Length of the saber 
+SWEP.UseWidth = 2 -- Width of the saber
+SWEP.UseColor = Color( 255, 0, 0 ) -- RGB Color of saber. Red = Color( 255, 0, 0 ) Blue = Color( 0, 0, 255 ), etc.
+SWEP.UseDarkInner = false -- Does it have a dark inner? 1 = true
+SWEP.UseLoopSound = false -- The loop sound path
+SWEP.UseSwingSound = false -- The swing sound path
+SWEP.UseOnSound = false -- The on sound path
+SWEP.UseOffSound = false -- The off sound path
+
+--These are the ones for the second saber for dual wielding. If you are using a single saber, this doesn't do shit
+SWEP.UseSecHilt = false
+SWEP.UseSecLength = false
+SWEP.UseSecWidth = false
+SWEP.UseSecColor = false
+SWEP.UseSecDarkInner = false
 -----------------------------------------------------------END OF EDIT----------------------------------------------------------------
 
 
