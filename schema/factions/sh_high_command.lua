@@ -1,14 +1,8 @@
-FACTION.name = "212th Attack Battalion"
+FACTION.name = "High Command"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(214, 138, 45)
-FACTION.faction = FACTION_212TH_ATTACK
+FACTION.color = Color(71, 23, 23)
+FACTION.faction = FACTION_HIGH_COMMAND
 FACTION.isDefault = false
-FACTION.models = {
-    "models/mayfield/212/trooper.mdl"
-}
-FACTION.weapons = {
-    "rw_sw_dc15a"
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -24,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_212TH_ATTACK = FACTION.index
+FACTION_HIGH_COMMAND = FACTION.index

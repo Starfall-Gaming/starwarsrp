@@ -1,11 +1,8 @@
-FACTION.name = "Event Characters"
-FACTION.description = "Classes used by gamemasters"
-FACTION.color = Color(169, 0, 255)
-FACTION.faction = FACTION_NAME
+FACTION.name = "Stormtrooper Corps"
+FACTION.description = "DESCRIPTION"
+FACTION.color = Color(140, 140, 140)
+FACTION.faction = FACTION_STORMTROOPER
 FACTION.isDefault = true
-FACTION.models = {
-    "models/player/kurier/fleet/admiral.mdl",
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -21,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_NAME = FACTION.index
+FACTION_STORMTROOPER = FACTION.index

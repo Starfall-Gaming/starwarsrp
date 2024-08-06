@@ -1,7 +1,7 @@
 CLASS.name = "Navy Crewman"
-CLASS.faction = FACTION_REPUBLIC_NAVY
+CLASS.faction = FACTION_IMPERIAL_FLEET
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/gonzo/navyvariants/green/green.mdl"
 }
 

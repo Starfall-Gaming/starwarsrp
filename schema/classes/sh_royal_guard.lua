@@ -1,7 +1,7 @@
 CLASS.name = "Red Guard"
-CLASS.faction = FACTION_RED_GUARD
+CLASS.faction = FACTION_ROYAL_GUARD
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/player/valley/lgn/jocasta/jocasta.mdl"
 }
 

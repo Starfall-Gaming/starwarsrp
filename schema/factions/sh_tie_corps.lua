@@ -1,14 +1,8 @@
-FACTION.name = "501st Legion"
+FACTION.name = "Starfighter Corps"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(29, 68, 242)
-FACTION.faction = FACTION_501ST_LEGION
+FACTION.color = Color(104, 104, 104)
+FACTION.faction = FACTION_TIE_CORPS
 FACTION.isDefault = false
-FACTION.models = {
-    "models/defcon/loudmantis/501/trooper.mdl"
-}
-FACTION.weapons = {
-    "rw_sw_dc15a"
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -24,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_501ST_LEGION = FACTION.index
+FACTION_TIE_CORPS = FACTION.index

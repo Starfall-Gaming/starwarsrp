@@ -1,7 +1,7 @@
 CLASS.name = "104th Trooper"
-CLASS.faction = FACTION_104TH_BATTALION
+CLASS.faction = FACTION_TIE_CORPS
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/memeious/104/trooper.mdl"
 }
 

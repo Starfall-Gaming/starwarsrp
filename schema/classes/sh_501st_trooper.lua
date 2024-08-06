@@ -1,7 +1,7 @@
 CLASS.name = "501st Trooper"
 CLASS.faction = FACTION_501ST_LEGION
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/defcon/loudmantis/501/trooper.mdl"
 }
 

@@ -1,7 +1,7 @@
 CLASS.name = "Galactic Emperor"
 CLASS.faction = FACTION_INNER_CIRCLE
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/player/emperor_palpatine.mdl"
 }
 

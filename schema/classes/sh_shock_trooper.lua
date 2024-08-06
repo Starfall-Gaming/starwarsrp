@@ -1,7 +1,7 @@
 CLASS.name = "Shock Trooper"
 CLASS.faction = FACTION_SHOCK_SECURITY
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/defcon/stallion/shock/trooper.mdl"
 }
 

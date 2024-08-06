@@ -1,7 +1,7 @@
 CLASS.name = "212th Trooper"
-CLASS.faction = FACTION_212TH_ATTACK
+CLASS.faction = FACTION_PURGE_DIVISION
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/mayfield/212/trooper.mdl"
 }
 

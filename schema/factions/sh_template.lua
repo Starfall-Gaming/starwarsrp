@@ -1,13 +1,10 @@
-FACTION.name = "1st Infantry"
+FACTION.name = "NAME"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(140, 140, 140)
-FACTION.faction = FACTION_CLONE_TROOPERS
+FACTION.color = Color(255, 255, 255, 255)
+FACTION.faction = FACTION_NAME
 FACTION.isDefault = true
-FACTION.models = {
-    "models/defcon/stan/1stinfantry/trooper/1stinfantrytrooper.mdl"
-}
 FACTION.weapons = {
-    "rw_sw_dc15a"
+    "WEAPON",
 }
 
 function FACTION:GetDefaultName(client)
@@ -24,4 +21,4 @@ if (SERVER) then
     end
 end
 
-FACTION_CLONE_TROOPERS = FACTION.index
+FACTION_NAME = FACTION.index

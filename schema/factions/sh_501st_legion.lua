@@ -1,14 +1,8 @@
-FACTION.name = "Republic Navy"
+FACTION.name = "Vader's Fist"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(3, 64, 97)
-FACTION.faction = FACTION_REPUBLIC_NAVY
+FACTION.color = Color(29, 68, 242)
+FACTION.faction = FACTION_501ST_LEGION
 FACTION.isDefault = false
-FACTION.models = {
-    "models/player/kurier/fleet/lightgrey.mdl",
-}
-FACTION.weapons = {
-    "rw_sw_dc15a"
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -24,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_REPUBLIC_NAVY = FACTION.index
+FACTION_501ST_LEGION = FACTION.index

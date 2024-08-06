@@ -1,7 +1,7 @@
 CLASS.name = "Elite Squad Trooper"
 CLASS.faction = FACTION_ELITE_SQUAD
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/nada/elitesquadtrooper.mdl"
 }
 

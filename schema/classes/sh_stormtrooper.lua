@@ -1,7 +1,7 @@
 CLASS.name = "Clone Trooper"
-CLASS.faction = FACTION_CLONE_TROOPERS
+CLASS.faction = FACTION_STORMTROOPER
 CLASS.isDefault = true
-CLASS.models = {
+CLASS.model = {
     "models/defcon/stan/1stinfantry/trooper/1stinfantrytrooper.mdl"
 }
 

@@ -1,11 +1,8 @@
-FACTION.name = "Inner Circle"
+FACTION.name = "Shock Security Force"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(71, 23, 23)
-FACTION.faction = FACTION_INNER_CIRCLE
+FACTION.color = Color(51, 9, 9)
+FACTION.faction = FACTION_SHOCK_SECURITY
 FACTION.isDefault = false
-FACTION.models = {
-    "models/player/kurier/fleet/admiral.mdl",
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -21,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_INNER_CIRCLE = FACTION.index
+FACTION_SHOCK_SECURITY = FACTION.index

@@ -1,14 +1,8 @@
-FACTION.name = "104th Battalion"
+FACTION.name = "Purge Trooper Division"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(104, 104, 104)
-FACTION.faction = FACTION_104TH_BATTALION
+FACTION.color = Color(214, 138, 45)
+FACTION.faction = FACTION_PURGE_DIVISION
 FACTION.isDefault = false
-FACTION.models = {
-    "models/memeious/104/trooper.mdl"
-}
-FACTION.weapons = {
-    "rw_sw_dc15a"
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -24,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_104TH_BATTALION = FACTION.index
+FACTION_PURGE_DIVISION = FACTION.index
