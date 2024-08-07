@@ -12,6 +12,8 @@ local weaponPrefixes = {
     "rw_sw_",
     "deathtrooper",
     "dt_",
+    "smooley_royalstaff",
+    "sfw_",
 }
 
 local weapons = weapons.GetList()

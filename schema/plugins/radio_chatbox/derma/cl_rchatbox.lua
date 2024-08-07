@@ -64,6 +64,7 @@ end
 DEFINE_BASECLASS("DScrollPanel")
 function PANEL:PerformLayout(width, height)
 	local bar = self:GetVBar()
+	if not ix.gui.chat then return end
 	local bScroll = !ix.gui.chat:GetActive() or bar.Scroll == bar.CanvasSize -- only scroll when we're not at the bottom/inactive
 
 	BaseClass.PerformLayout(self, width, height)

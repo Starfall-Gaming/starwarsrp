@@ -1,11 +1,8 @@
-FACTION.name = "NAME"
+FACTION.name = "Cadet Corps"
 FACTION.description = "DESCRIPTION"
-FACTION.color = Color(255, 255, 255, 255)
-FACTION.faction = FACTION_NAME
+FACTION.color = Color(140, 140, 140)
+FACTION.faction = FACTION_CADET
 FACTION.isDefault = true
-FACTION.weapons = {
-    "WEAPON",
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -21,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_NAME = FACTION.index
+FACTION_CADET = FACTION.index

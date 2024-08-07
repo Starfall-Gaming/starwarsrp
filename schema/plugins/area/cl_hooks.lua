@@ -27,22 +27,22 @@ function PLUGIN:InitPostEntity()
 	hook.Run("SetupAreaProperties")
 end
 
-function PLUGIN:ChatboxCreated()
-	if (IsValid(self.panel)) then
-		self.panel:Remove()
-	end
+-- function PLUGIN:ChatboxCreated()
+-- 	if (IsValid(self.panel)) then
+-- 		self.panel:Remove()
+-- 	end
 
-	self.panel = vgui.Create("ixArea")
-end
+-- 	self.panel = vgui.Create("ixArea")
+-- end
 
-function PLUGIN:ChatboxPositionChanged(x, y, width, height)
-	if (!IsValid(self.panel)) then
-		return
-	end
+-- function PLUGIN:ChatboxPositionChanged(x, y, width, height)
+-- 	if (!IsValid(self.panel)) then
+-- 		return
+-- 	end
 
-	self.panel:SetSize(width, y)
-	self.panel:SetPos(32, 0)
-end
+-- 	self.panel:SetSize(width, y)
+-- 	self.panel:SetPos(32, 0)
+-- end
 
 function PLUGIN:ShouldDrawCrosshair()
 	if (ix.area.bEditing) then
@@ -202,6 +202,9 @@ function PLUGIN:OnAreaChanged(oldID, newID)
 	-- local format = newID .. (ix.option.Get("24hourTime", false) and ", %H:%M." or ", %I:%M %p.")
 	-- format = ix.date.GetFormatted(format)
 
+	if not self.panel then 
+		self.panel = vgui.Create("ixArea")
+	end
 	self.panel:AddEntry(newID, area.properties.color)
 end
 

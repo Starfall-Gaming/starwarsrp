@@ -1,14 +1,8 @@
-FACTION.name = "Elite Squad"
+FACTION.name = "Death Trooper Division"
 FACTION.description = "DESCRIPTION"
 FACTION.color = Color(25, 56, 31)
-FACTION.faction = FACTION_ELITE_SQUAD
+FACTION.faction = FACTION_DEATH_TROOPER
 FACTION.isDefault = false
-FACTION.models = {
-    "models/nada/elitesquadtrooper.mdl"
-}
-FACTION.weapons = {
-    "rw_sw_dc15a"
-}
 
 function FACTION:GetDefaultName(client)
 end
@@ -24,4 +18,4 @@ if (SERVER) then
     end
 end
 
-FACTION_ELITE_SQUAD = FACTION.index
+FACTION_DEATH_TROOPER = FACTION.index

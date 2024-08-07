@@ -1,4 +1,4 @@
-FACTION.name = "Royal Guard"
+FACTION.name = "Emperor's Guard"
 FACTION.description = "DESCRIPTION"
 FACTION.color = Color(255, 0, 0)
 FACTION.faction = FACTION_ROYAL_GUARD

@@ -1,4 +1,4 @@
-FACTION.name = "Purge Trooper Division"
+FACTION.name = "Purge Division"
 FACTION.description = "DESCRIPTION"
 FACTION.color = Color(214, 138, 45)
 FACTION.faction = FACTION_PURGE_DIVISION

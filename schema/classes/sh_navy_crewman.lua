@@ -1,9 +1,12 @@
-CLASS.name = "Navy Crewman"
+CLASS.name = "Crewman"
 CLASS.faction = FACTION_IMPERIAL_FLEET
 CLASS.isDefault = true
 CLASS.model = {
-    "models/gonzo/navyvariants/green/green.mdl"
+    "models/nada/pms/male/black_naval_officer.mdl",
+    "models/nada/pms/female/black_naval_officer.mdl"
 }
+CLASS.hp = 100
+CLASS.armor = 50
 
 function CLASS:CanSwitchTo(client)
 end
@@ -13,11 +16,9 @@ if (SERVER) then
     end
 
     function CLASS:OnSet(client)
-	    client:SetModel("models/gonzo/navyvariants/green/green.mdl")
     end
 
     function CLASS:OnSpawn(client)
-	    client:SetModel("models/gonzo/navyvariants/green/green.mdl")
     end
 end
 

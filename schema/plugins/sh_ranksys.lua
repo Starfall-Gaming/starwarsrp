@@ -37,10 +37,6 @@ local rankSystem = {
             { rank = "Vice Commander", short = "VC", number = "CO-1" },
             { rank = "Commander", short = "CDR", number = "CO-2" },
         },
-        high_command = {
-            { rank = "General", short = "GEN", number = "CO-3" },
-            { rank = "Grand General", short = "GGEN", number = "CO-4" },
-        },
     },
     ["Navy"] = {
         enlisted = {
@@ -68,10 +64,6 @@ local rankSystem = {
         staff = {
             { rank = "Commodore", short = "COM", number = "CO-1" },
             { rank = "Rear Admiral", short = "RADM", number = "CO-2" },
-        },
-        high_command = {
-            { rank = "Fleet Admiral", short = "FADM", number = "CO-3" },
-            { rank = "Grand Admiral", short = "GADM", number = "CO-4" },
         },
     },
     ["TIE"] = {
@@ -101,34 +93,6 @@ local rankSystem = {
             { rank = "Flight Commodore", short = "FCM", number = "CO-1" },
             { rank = "Air Marshal", short = "AML", number = "CO-2" },
         },
-        high_command = {
-            { rank = "Fleet Admiral", short = "FADM", number = "CO-3" },
-            { rank = "Grand Admiral", short = "GADM", number = "CO-4" },
-        },
-    },
-    ["DT"] = {
-        enlisted = {
-            { rank = "Recruit", short = "RCT", number = "E-2" },
-            { rank = "Trooper", short = "TRP", number = "E-4" },
-        },
-        nco = {
-            { rank = "Corporal", short = "CPL", number = "N-2" },
-            { rank = "Sergeant", short = "SGT", number = "N-4" },
-            { rank = "Squad Leader", short = "SQLD", number = "N-6" },
-        },
-        co = {
-            { rank = "Lieutenant", short = "LT", number = "O-2" },
-            { rank = "Captain", short = "CPT", number = "O-4" },
-            { rank = "Major", short = "MAJ", number = "O-6" },
-        },
-        staff = {
-            { rank = "Vice Commander", short = "VC", number = "CO-1" },
-            { rank = "Commander", short = "CDR", number = "CO-2" },
-        },
-        high_command = {
-            { rank = "Fleet Admiral", short = "FADM", number = "CO-3" },
-            { rank = "Grand Admiral", short = "GADM", number = "CO-4" },
-        },
     },
     ["Inquisitor"] = {
         enlisted = {
@@ -153,9 +117,6 @@ local rankSystem = {
             { rank = "Named Inquisitor", short = "IQ", number = "CO-1" },
             { rank = "Second Sister", short = "2nd", number = "CO-2" },
         },
-        high_command = {
-            { rank = "Grand Inquisitor", short = "GADM", number = "CO-4" },
-        },
     },
     ["Guardsmen"] = {
         enlisted = {
@@ -171,8 +132,6 @@ local rankSystem = {
         },
         staff = {
             { rank = "Lieutenant", short = "LT", number = "CO-1" },
-        },
-        high_command = {
             { rank = "Captain", short = "CPT", number = "CO-4" },
         },
     },
@@ -181,12 +140,12 @@ local rankSystem = {
 
 
 local branchFactionMap = {
-    Army = {FACTION_TIE_CORPS, FACTION_PURGE_DIVISION, FACTION_501ST_LEGION, FACTION_STORMTROOPER, FACTION_SHOCK_SECURITY}, -- Replace with actual faction IDs for the Army
-    Navy = {FACTION_NAVY}, -- Replace with actual faction IDs for the Navy
-    DT = {FACTION_ELITE_SQUAD},
-    Inquisitor = {},
+    Army = {FACTION_501ST_LEGION,FACTION_SHOCK_SECURITY,FACTION_STORMTROOPER,FACTION_PURGE_DIVISION}, -- Replace with actual faction IDs for the Army
+    Navy = {FACTION_IMPERIAL_FLEET}, -- Replace with actual faction IDs for the Navy
+    TIE = {FACTION_TIE_CORPS},
+    Inquisitor = {FACTION_INQUISITION},
     Guardsmen = {FACTION_ROYAL_GUARD},
-    Admin = {FACTION_INNER_CIRCLE},
+    Admin = {FACTION_HIGH_COMMAND},
 }
 
 function GetPlayerBranch(char)
@@ -292,14 +251,14 @@ function CanPlayerPromote(promoterChar, targetChar)
     local targetBranch = GetPlayerBranch(targetChar)
 
     -- Ensure promoter and target are in the same branch
-    if promoterBranch == "Admin" or promoterBranch ~= targetBranch then
-        return false, "You can only promote members within your own branch."
-    end
+    -- if promoterBranch ~= targetBranch then
+    --     return false, "You can only promote members within your own branch."
+    -- end
 
     -- Check if the promoter is at least a CO in their branch
     local promoterRankNumber = promoterChar:GetData("rankNumber")
     for category, ranks in pairs(rankSystem[promoterBranch]) do
-        if category == "co" or category == "staff" or category == "high_command" then
+        if category == "co" or category == "staff" then
             for _, rankInfo in ipairs(ranks) do
                 if rankInfo.number == promoterRankNumber then
                     return true
@@ -613,7 +572,7 @@ end
 
 
 if CLIENT then
-    local playerRanks = {}
+    playerRanks = {}
 
     net.Receive("UpdatePlayerRank", function()
         local player = net.ReadEntity()
@@ -621,24 +580,25 @@ if CLIENT then
         local rankNumber = net.ReadString()
 
         if IsValid(player) then
-            playerRanks[player] = { rank = rank, number = rankNumber }
+            playerRanks[player:SteamID64()] = { rank = rank, number = rankNumber }
         end
     end)
 
 
+    -- Add initial rank setup to character creation
+    function PLUGIN:OnCharacterCreated(client, character)
+        PLUGIN:SetInitialRank(character)
+    end
 
 
+    function PLUGIN:PopulateCharacterInfo(client, character, tooltip)
+    local rankData = playerRanks[client:SteamID64()] or { rank = "Cadet", number = "N/A" }
+        local rankText = "Rank: " .. rankData.rank .. " (" .. rankData.number .. ")"
 
-function PLUGIN:PopulateCharacterInfo(client, character, tooltip)
-   local rankData = playerRanks[client] or { rank = "Unknown", number = "N/A" }
-    local rankText = "Rank: " .. rankData.rank .. " (" .. rankData.number .. ")"
+            local rankRow = tooltip:AddRow("rank")
+            rankRow:SetText(rankText)
+            rankRow:SizeToContents()
+            rankRow:SetBackgroundColor(Color(0, 97, 117))
 
-        local rankRow = tooltip:AddRow("rank")
-        rankRow:SetText(rankText)
-        rankRow:SizeToContents()
-        rankRow:SetBackgroundColor(Color(0, 97, 117))
-
-end
-
-
+    end
 end

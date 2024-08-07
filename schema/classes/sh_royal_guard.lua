@@ -1,9 +1,11 @@
-CLASS.name = "Red Guard"
+CLASS.name = "Royal Guard"
 CLASS.faction = FACTION_ROYAL_GUARD
 CLASS.isDefault = true
 CLASS.model = {
-    "models/player/valley/lgn/jocasta/jocasta.mdl"
+    "models/kir_kanos.mdl"
 }
+CLASS.hp = 300
+CLASS.armor = 100
 
 function CLASS:CanSwitchTo(client)
 end
@@ -13,12 +15,10 @@ if (SERVER) then
     end
 
     function CLASS:OnSet(client)
-	    client:SetModel("models/player/valley/lgn/jocasta/jocasta.mdl")
     end
 
     function CLASS:OnSpawn(client)
-	    client:SetModel("models/player/valley/lgn/jocasta/jocasta.mdl")
     end
 end
 
-CLASS_SENATE_COMMANDO_TROOPER = CLASS.index
+CLASS_ROYAL_GUARD = CLASS.index

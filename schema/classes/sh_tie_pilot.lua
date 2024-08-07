@@ -1,9 +1,11 @@
-CLASS.name = "104th Trooper"
+CLASS.name = "Airman"
 CLASS.faction = FACTION_TIE_CORPS
 CLASS.isDefault = true
 CLASS.model = {
-    "models/memeious/104/trooper.mdl"
+    "models/stan/181st/airman.mdl"
 }
+CLASS.hp = 100
+CLASS.armor = 50
 
 function CLASS:CanSwitchTo(client)
 end
@@ -14,16 +16,10 @@ if (SERVER) then
     end
 
     function CLASS:OnSet(client)
-	    client:SetModel("models/memeious/104/trooper.mdl")
     end
 
     function CLASS:OnSpawn(client)
-	    client:SetModel("models/memeious/104/trooper.mdl")
-        client:SetHealth(400)
-        client:SetMaxHealth(400)
-        client:SetArmor(100)
-        client:SetMaxArmor(100)
     end
 end
 
-CLASS_104TH_TROOPER = CLASS.index
+CLASS_TIE_PILOT = CLASS.index

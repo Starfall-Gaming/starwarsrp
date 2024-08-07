@@ -1,9 +1,11 @@
-CLASS.name = "501st Trooper"
+CLASS.name = "Trooper"
 CLASS.faction = FACTION_501ST_LEGION
 CLASS.isDefault = true
 CLASS.model = {
-    "models/defcon/loudmantis/501/trooper.mdl"
+    "models/player/bunny/imperial_501_revision/501_trooper.mdl"
 }
+CLASS.hp = 100
+CLASS.armor = 50
 
 function CLASS:CanSwitchTo(client)
 end
@@ -13,11 +15,9 @@ if (SERVER) then
     end
 
     function CLASS:OnSet(client)
-	    client:SetModel("models/defcon/loudmantis/501/trooper.mdl")
     end
 
     function CLASS:OnSpawn(client)
-	    client:SetModel("models/defcon/loudmantis/501/trooper.mdl")
     end
 end
 

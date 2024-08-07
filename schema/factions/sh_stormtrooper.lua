@@ -2,7 +2,7 @@ FACTION.name = "Stormtrooper Corps"
 FACTION.description = "DESCRIPTION"
 FACTION.color = Color(140, 140, 140)
 FACTION.faction = FACTION_STORMTROOPER
-FACTION.isDefault = true
+FACTION.isDefault = false
 
 function FACTION:GetDefaultName(client)
 end

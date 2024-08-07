@@ -1,9 +1,11 @@
-CLASS.name = "212th Trooper"
+CLASS.name = "Trooper"
 CLASS.faction = FACTION_PURGE_DIVISION
 CLASS.isDefault = true
 CLASS.model = {
-    "models/mayfield/212/trooper.mdl"
+    "models/nada/purgetrooperelectrobaton.mdl"
 }
+CLASS.hp = 100
+CLASS.armor = 50
 
 function CLASS:CanSwitchTo(client)
 end
@@ -13,16 +15,10 @@ if (SERVER) then
     end
 
     function CLASS:OnSet(client)
-	    client:SetModel("models/mayfield/212/trooper.mdl")
     end
 
     function CLASS:OnSpawn(client)
-	    client:SetModel("models/mayfield/212/trooper.mdl")
-        client:SetHealth(400)
-        client:SetMaxHealth(400)
-        client:SetArmor(100)
-        client:SetMaxArmor(100)
     end
 end
 
-CLASS_212TH_TROOPER = CLASS.index
+CLASS_PURGE_TROOPER = CLASS.index

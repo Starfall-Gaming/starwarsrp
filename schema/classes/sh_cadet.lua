@@ -1,11 +1,12 @@
-CLASS.name = "Trooper"
-CLASS.faction = FACTION_DEATH_TROOPER
+CLASS.name = "Cadet"
+CLASS.faction = FACTION_CADET
 CLASS.isDefault = true
 CLASS.model = {
-    "models/nada/deathtrooperscaled.mdl"
+    "models/nada/imperialcadet_male.mdl",
+    "models/nada/imperialcadet_female.mdl"
 }
-CLASS.hp = 300
-CLASS.armor = 100
+CLASS.hp = 100
+CLASS.armor = 0
 
 function CLASS:CanSwitchTo(client)
 end
@@ -21,4 +22,4 @@ if (SERVER) then
     end
 end
 
-CLASS_DEATH_TROOPER = CLASS.index
+CLASS_CADET = CLASS.index
