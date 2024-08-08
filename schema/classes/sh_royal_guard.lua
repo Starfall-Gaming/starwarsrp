@@ -6,19 +6,6 @@ CLASS.model = {
 }
 CLASS.hp = 300
 CLASS.armor = 100
-
-function CLASS:CanSwitchTo(client)
-end
-
-if (SERVER) then
-    function CLASS:OnLeave(client)
-    end
-
-    function CLASS:OnSet(client)
-    end
-
-    function CLASS:OnSpawn(client)
-    end
-end
+CLASS.salary = 150
 
 CLASS_ROYAL_GUARD = CLASS.index

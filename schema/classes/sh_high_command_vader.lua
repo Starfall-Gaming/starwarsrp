@@ -9,20 +9,7 @@ CLASS.weapons = {
 }
 CLASS.hp = 1200
 CLASS.armor = 500
-
-function CLASS:CanSwitchTo(client)
-end
-
-if (SERVER) then
-    function CLASS:OnLeave(client)
-    end
-
-    function CLASS:OnSet(client)
-    end
-
-    function CLASS:OnSpawn(client)
-        client:SetModelScale(1.15)
-    end
-end
+CLASS.salary = 400
+CLASS.limit = 1
 
 CLASS_DARTH_VADER = CLASS.index

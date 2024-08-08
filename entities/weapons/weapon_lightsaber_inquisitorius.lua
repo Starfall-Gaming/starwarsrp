@@ -54,7 +54,7 @@ SWEP.PrintName = "Inquistorius's Lightsaber" --Name of the lightsaber
 SWEP.Class = "weapon_lightsaber_inquisitorius" --The file name of this swep
 SWEP.DualWielded = false --Should this be a dual wielded saber?
 SWEP.CanMoveWhileAttacking = true -- Can the user move while attacking
-SWEP.SaberDamage = 200 --How much damage the saber does when it's being swung
+SWEP.SaberDamage = 150 --How much damage the saber does when it's being swung
 SWEP.SaberBurnDamage = 25 -- How much damage the saber does when it's colliding with someone ( coming in contact with laser )
 SWEP.MaxForce = 100 --The maximum amount of force in the meter
 SWEP.RegenSpeed = 1 --The MULTIPLIER for the regen speed. Half speed = 0.5, Double speed = 2, etc.

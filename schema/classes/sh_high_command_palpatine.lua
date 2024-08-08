@@ -9,17 +9,7 @@ CLASS.weapons = {
 }
 CLASS.hp = 1500
 CLASS.armor = 500
+CLASS.salary = 500
 CLASS.limit = 1
-
-if (SERVER) then
-    function CLASS:OnLeave(client)
-    end
-
-    function CLASS:OnSet(client)
-    end
-
-    function CLASS:OnSpawn(client)
-    end
-end
 
 CLASS_EMPEROR_PALPATINE = CLASS.index

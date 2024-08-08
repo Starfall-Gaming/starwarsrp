@@ -7,19 +7,7 @@ CLASS.weapons = {
 }
 CLASS.hp = 1000
 CLASS.armor = 200
-
-function CLASS:CanSwitchTo(client)
-end
-
-if (SERVER) then
-    function CLASS:OnLeave(client)
-    end
-
-    function CLASS:OnSet(client)
-    end
-
-    function CLASS:OnSpawn(client)
-    end
-end
+CLASS.salary = 250
+CLASS.limit = 1
 
 CLASS_SECOND_SISTER = CLASS.index
