@@ -1,5 +1,5 @@
 CLASS.name = "Cadet"
-CLASS.faction = FACTION_CADET
+CLASS.faction = FACTION_STORMTROOPER
 CLASS.isDefault = true
 CLASS.model = {
     "models/nada/imperialcadet_male.mdl",

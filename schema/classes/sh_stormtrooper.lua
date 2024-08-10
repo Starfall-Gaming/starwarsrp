@@ -1,6 +1,6 @@
 CLASS.name = "Trooper"
 CLASS.faction = FACTION_STORMTROOPER
-CLASS.isDefault = true
+CLASS.isDefault = false
 CLASS.model = {
     "models/bunny/stormtrooper_revamp/stormtrooper_trooper.mdl"
 }
