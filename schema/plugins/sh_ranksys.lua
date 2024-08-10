@@ -271,7 +271,7 @@ function CanPlayerPromote(promoterChar, targetChar)
     if targetBranch == "HighCommand" then return false end
 
     -- Ensure promoter and target are in the same branch
-    if promoterBranch ~= targetBranch then
+    if targetChar:GetData("rank") ~= "Cadet" and promoterBranch ~= targetBranch then
         return false, "You can only promote members within your own branch."
     end
 
@@ -297,6 +297,8 @@ function FindNextRank(branch, currentRankNumber)
     if currentRankIndex and ranks[currentRankIndex + 1] then
         return ranks[currentRankIndex + 1]
     end
+
+    if currentRankNumber == "E-0" then return ranks[1] end
 
     return nil
 end
@@ -416,6 +418,11 @@ function PromotePlayer(targetChar, promoterChar)
     -- Admins can promote to any rank directly
     if isPromoterAdmin then
         local nextRank = FindNextRank(targetBranch, targetRankNumber)
+        if nextRank.rank == "Private" then
+            targetChar:GetPlayer():SetClassWhitelisted(CLASS_STORMTROOPER, true)
+            targetChar:JoinClass(CLASS_STORMTROOPER)
+        end
+
         if nextRank then
             targetChar:SetData("rank", nextRank.rank)
             targetChar:SetData("rankShort", nextRank.short)
@@ -434,6 +441,11 @@ function PromotePlayer(targetChar, promoterChar)
     end
 
     local nextRank = FindNextRank(targetBranch, targetRankNumber)
+    if nextRank.rank == "Private" then
+        targetChar:GetPlayer():SetClassWhitelisted(CLASS_STORMTROOPER, true)
+        targetChar:JoinClass(CLASS_STORMTROOPER)
+    end
+
     if nextRank then
         targetChar:SetData("rank", nextRank.rank)
         targetChar:SetData("rankShort", nextRank.short)
