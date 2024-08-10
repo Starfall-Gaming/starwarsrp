@@ -34,8 +34,8 @@ local rankSystem = {
             { rank = "Colonel", short = "COL", number = "O-6" },
         },
         staff = {
-            { rank = "Vice Commander", short = "VC", number = "CO-1" },
-            { rank = "Commander", short = "CDR", number = "CO-2" },
+            { rank = "Vice Commander", short = "VC", number = "C-1" },
+            { rank = "Commander", short = "CDR", number = "C-2" },
         },
     },
     ["Navy"] = {
@@ -62,8 +62,8 @@ local rankSystem = {
             { rank = "Captain", short = "CPT", number = "O-6" },
         },
         staff = {
-            { rank = "Commodore", short = "COM", number = "CO-1" },
-            { rank = "Rear Admiral", short = "RADM", number = "CO-2" },
+            { rank = "Commodore", short = "COM", number = "C-1" },
+            { rank = "Rear Admiral", short = "RADM", number = "C-2" },
         },
     },
     ["TIE"] = {
@@ -90,8 +90,8 @@ local rankSystem = {
             { rank = "Group Captain", short = "GCPT", number = "O-6" },
         },
         staff = {
-            { rank = "Flight Commodore", short = "FCM", number = "CO-1" },
-            { rank = "Air Marshal", short = "AML", number = "CO-2" },
+            { rank = "Flight Commodore", short = "FCM", number = "C-1" },
+            { rank = "Air Marshal", short = "AML", number = "C-2" },
         },
     },
     ["Inquisitor"] = {
@@ -114,8 +114,8 @@ local rankSystem = {
             { rank = "Overseer", short = "OVS", number = "O-6" },
         },
         staff = {
-            { rank = "Named Inquisitor", short = "IQ", number = "CO-1" },
-            { rank = "Second Sister", short = "2nd", number = "CO-2" },
+            { rank = "Named Inquisitor", short = "IQ", number = "C-1" },
+            { rank = "Second Sister", short = "2nd", number = "C-2" },
         },
     },
     ["Guardsmen"] = {
@@ -131,8 +131,25 @@ local rankSystem = {
             { rank = "Sergeant", short = "SGT", number = "O-6" },
         },
         staff = {
-            { rank = "Lieutenant", short = "LT", number = "CO-1" },
-            { rank = "Captain", short = "CPT", number = "CO-4" },
+            { rank = "Lieutenant", short = "LT", number = "C-1" },
+            { rank = "Captain", short = "CPT", number = "C-2" },
+        },
+    },
+    ["HighCommand"] = {
+        enlisted = {
+            { rank = "General", short = "GEN", number = "C-3" },
+            { rank = "Admiral", short = "ADM", number = "C-3" },
+        },
+        nco = {
+            { rank = "Grand General", short = "GGEN", number = "C-4" },
+            { rank = "Grand Admiral", short = "GADM", number = "C-4" },
+            { rank = "Grand Inquisitor", short = "GINQ", number = "C-4" },
+        },
+        co = {
+            { rank = "Emperor's Fist", short = "FIST", number = "C-5" },
+            { rank = "Emperor", short = "EMP", number = "C-6" },
+        },
+        staff = {
         },
     },
     -- Additional branches if needed
@@ -145,7 +162,7 @@ local branchFactionMap = {
     TIE = {FACTION_TIE_CORPS},
     Inquisitor = {FACTION_INQUISITION},
     Guardsmen = {FACTION_ROYAL_GUARD},
-    Admin = {FACTION_HIGH_COMMAND},
+    HighCommand = {FACTION_HIGH_COMMAND},
 }
 
 function GetPlayerBranch(char)
@@ -200,7 +217,7 @@ function GetRankIndex(ranks, rankIdentifier)
 end
 
 function rankSortingValue(rankInfo)
-    local prefixOrder = {E = 0, N = 1, O = 2, CO = 3}
+    local prefixOrder = {E = 0, N = 1, O = 2, C = 3}
     local prefix = rankInfo.number:sub(1, 1) -- Extract the prefix (E, N, O)
     local num = tonumber(rankInfo.number:sub(3)) -- Extract the numeric part
 
@@ -226,8 +243,8 @@ function GetRanksInBranch(branch)
     -- Sort the ranks based on the calculated sorting value
     table.sort(sortedRanks, function(a, b) return rankSortingValue(a) < rankSortingValue(b) end)
 
-    --print("Sorted ranks in branch:", branch)
-    --PrintTable(sortedRanks) -- Assuming PrintTable is a function to print the table contents
+    -- print("Sorted ranks in branch:", branch)
+    -- PrintTable(sortedRanks) -- Assuming PrintTable is a function to print the table contents
     return sortedRanks
 end
 
@@ -248,12 +265,15 @@ function CanPlayerPromote(promoterChar, targetChar)
     end
 
     local promoterBranch = GetPlayerBranch(promoterChar)
+    if promoterBranch == "HighCommand" then return true end
+
     local targetBranch = GetPlayerBranch(targetChar)
+    if targetBranch == "HighCommand" then return false end
 
     -- Ensure promoter and target are in the same branch
-    -- if promoterBranch ~= targetBranch then
-    --     return false, "You can only promote members within your own branch."
-    -- end
+    if promoterBranch ~= targetBranch then
+        return false, "You can only promote members within your own branch."
+    end
 
     -- Check if the promoter is at least a CO in their branch
     local promoterRankNumber = promoterChar:GetData("rankNumber")
@@ -558,7 +578,7 @@ function PLUGIN:OnCharacterCreated(client, character)
     local defaultRank = {
         rank = "Cadet",
         short = "CDT",
-        number = "E0"
+        number = "E-0"
     }
 
     character:SetData("rank", defaultRank.rank)

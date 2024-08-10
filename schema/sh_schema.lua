@@ -3,7 +3,7 @@
 
 -- Schema info
 Schema.name = "Imperial RP"
-Schema.author = "Froggles"
+Schema.author = "Starfall Gaming"
 Schema.description = "Starfall Gaming"
 
 -- Additional files that aren't auto-included should be included here. Note that ix.util.Include will take care of properly
@@ -17,7 +17,7 @@ Schema.description = "Starfall Gaming"
 ix.util.Include("cl_schema.lua")
 ix.util.Include("sv_schema.lua")
 
-ix.util.Include("cl_hooks.lua")
+-- ix.util.Include("cl_hooks.lua")
 ix.util.Include("sh_hooks.lua")
 ix.util.Include("sv_hooks.lua")
 

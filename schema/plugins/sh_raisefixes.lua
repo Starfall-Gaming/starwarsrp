@@ -14,6 +14,8 @@ local weaponPrefixes = {
     "dt_",
     "smooley_royalstaff",
     "sfw_",
+    "pack_swswep_",
+    "seal6-tac-insert",
 }
 
 local weapons = weapons.GetList()

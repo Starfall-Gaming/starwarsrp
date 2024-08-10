@@ -31,35 +31,35 @@ if CLIENT then
         rankRow:SetText(rank)
         rankRow:SizeToContents()
 
-        -- Allegiance
-        local allegianceRow = characterInfo:Add("ixListRow")
-        allegianceRow:SetList(characterInfo.list)
-        allegianceRow:Dock(TOP)
-        local alleg = (playerObj.RSS_GetAllegiance and playerObj:RSS_GetAllegiance()) or "None"
-        alleg = alleg ~= "None" and alleg or "Allegianceless"
-        allegianceRow:SetLabelText("Allegiance:")
-        allegianceRow:SetText(alleg)
-        allegianceRow:SizeToContents()
+        -- -- Allegiance
+        -- local allegianceRow = characterInfo:Add("ixListRow")
+        -- allegianceRow:SetList(characterInfo.list)
+        -- allegianceRow:Dock(TOP)
+        -- local alleg = (playerObj.RSS_GetAllegiance and playerObj:RSS_GetAllegiance()) or "None"
+        -- alleg = alleg ~= "None" and alleg or "Allegianceless"
+        -- allegianceRow:SetLabelText("Allegiance:")
+        -- allegianceRow:SetText(alleg)
+        -- allegianceRow:SizeToContents()
 
-        -- Squad
-        local squadRow = characterInfo:Add("ixListRow")
-        squadRow:SetList(characterInfo.list)
-        squadRow:Dock(TOP)
-        local squad = (playerObj.RSS_GetSquad and playerObj:RSS_GetSquad()) or "None"
-        squad = squad ~= "None" and squad or "Squadless"
-        squadRow:SetLabelText("Squad:")
-        squadRow:SetText(squad)
-        squadRow:SizeToContents()
+        -- -- Squad
+        -- local squadRow = characterInfo:Add("ixListRow")
+        -- squadRow:SetList(characterInfo.list)
+        -- squadRow:Dock(TOP)
+        -- local squad = (playerObj.RSS_GetSquad and playerObj:RSS_GetSquad()) or "None"
+        -- squad = squad ~= "None" and squad or "Squadless"
+        -- squadRow:SetLabelText("Squad:")
+        -- squadRow:SetText(squad)
+        -- squadRow:SizeToContents()
 
-        -- Role
-        local roleRow = characterInfo:Add("ixListRow")
-        roleRow:SetList(characterInfo.list)
-        roleRow:Dock(TOP)
-        local role = (playerObj.RSS_GetRole and playerObj:RSS_GetRole()) or "None"
-        role = role ~= "None" and role or "Roleless (Contact a staff member)"
-        roleRow:SetLabelText("Role:")
-        roleRow:SetText(role)
-        roleRow:SizeToContents()
+        -- -- Role
+        -- local roleRow = characterInfo:Add("ixListRow")
+        -- roleRow:SetList(characterInfo.list)
+        -- roleRow:Dock(TOP)
+        -- local role = (playerObj.RSS_GetRole and playerObj:RSS_GetRole()) or "None"
+        -- role = role ~= "None" and role or "Roleless (Contact a staff member)"
+        -- roleRow:SetLabelText("Role:")
+        -- roleRow:SetText(role)
+        -- roleRow:SizeToContents()
     end
 
 
